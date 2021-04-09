@@ -7,6 +7,7 @@ The Synopsis script, that can be found in the directory named as the entity, ana
 /
 ## directory structure
 ======================
+/
 ###pre script
 -entityname
  -report
