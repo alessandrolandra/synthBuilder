@@ -8,13 +8,13 @@ The Synopsis script, that can be found in the directory named as the entity, ana
 ## directory structure
 
 ### pre script
-entityname
+1. entityname
  -report
  -schematic
  -architecture.script
 
 ### post script
-entityname
+1. entityname
  -report
   -timing_architecture.txt
   -area_architecture.txt
