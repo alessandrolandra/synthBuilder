@@ -8,17 +8,17 @@ The Synopsis script, that can be found in the directory named as the entity, ana
 ## directory structure
 
 ### pre script
-1. entityname
-   - report
-   - schematic
-   - architecture.script
+- entityname
+  - report
+  - schematic
+  - architecture.script
 
 ### post script
-1. entityname
-   - report
+- entityname
+  - report
     - timing_architecture.txt
     - area_architecture.txt
-   - schematic
-   - architecture.script
-   - architecture.ddc
-   - postSyn_architecture.vhdl
+  - schematic
+  - architecture.script
+  - architecture.ddc
+  - postSyn_architecture.vhdl
