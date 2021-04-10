@@ -38,7 +38,7 @@ This will generate the following folder structure:
 - alu
   - report
   - schematic
-  - BEHAVIORAL_VERSION_B.script
+  - BEHAVIORAL_VERSION_B.script\
 \
 That becomes the next one after the BEHAVIORAL_VERSION_B.script execution (with Synopsys):
 \
