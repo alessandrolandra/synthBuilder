@@ -36,9 +36,11 @@ Example:\
 This will generate the following folder structure:
 \
 <ul><li>alu
-  <li>report</li>
-  <li>schematic</li>
-  <li>BEHAVIORAL_VERSION_B.script</li>
+  <ul>
+    <li>report</li>
+    <li>schematic</li>
+    <li>BEHAVIORAL_VERSION_B.script</li>
+  </ul>
 </li></ul>
 \
 That becomes the next one after the BEHAVIORAL_VERSION_B.script execution (with Synopsys):
