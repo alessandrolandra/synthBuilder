@@ -5,7 +5,7 @@ By running the script, a set of folders is created in the current directory and 
 To synthesize an architecture, its name and the one of the related entity are required, as well as the vhd filename in which they are described.\
 The Synopsis script, that can be found in the directory named as the entity, analyzes, elaborates and compiles the wanted architecture and generates the ddc and post synthesis vhdl files, as well as the area and timing reports. The latter are placed in a directory called report, and anotherone, named schematic, is created to handle the physical layout pictures; this folder is left empty by the script, has just been placed to better organize the files.
 
-## directory structure
+## Directory structure
 
 ### pre script
 - `<entity>`
@@ -22,12 +22,34 @@ The Synopsis script, that can be found in the directory named as the entity, ana
   - `<architecture>`.script
   - `<architecture>`.ddc
   - postSyn_`<architecture>`.vhdl
-
-## script usage
+\
+## Script usage
 
 You need to specify the `<entity>` and the `<architecture>` you want to synthesize (**same names as in the vhd file**), the VHD filename(s) and the PARAMeter(s) to be set constant during synthesis, in case they are needed.\
 \
-If you need to specify more than one VHD file, you need to separe them with a *whitespace*.\
-Parameters have to follow this pattern: `"NAME = VALUE"`, enclosed in double quotes and separed by whitespace if more than one is needed (`"N = 4 M = 4"`).\
+If you need to specify more than one VHD file, you need to separe them with a **whitespace**.\
+Parameters have to follow this pattern: `"NAME = VALUE"`, enclosed in double quotes, and separed by whitespace if more than one is needed (`"N = 4 M = 4"`).\
+\
 Example:\
-`bash synthBuilder.bash -entity alu -architecture BEHAVIORAL_VERSION_B -vhd alu.vhd - param \"N = 4\""`
+`bash synthBuilder.bash -entity alu -architecture BEHAVIORAL_VERSION_B -vhd alu.vhd - param "N = 4"`
+\
+This will generate the following folder structure:
+\
+- alu
+  - report
+  - schematic
+  - BEHAVIORAL_VERSION_B.script
+\
+That becomes the next one after the BEHAVIORAL_VERSION_B.script execution (with Synopsys):
+\
+- alu
+  - report
+    - timing_BEHAVIORAL_VERSION_B.txt
+    - area_BEHAVIORAL_VERSION_B.txt
+  - schematic
+  - BEHAVIORAL_VERSION_B.script
+  - BEHAVIORAL_VERSION_B.ddc
+  - postSyn_BEHAVIORAL_VERSION_B.vhdl
+\
+If you have multiple architectures to synthesize, for the same entity, you just need to rerun the **synthBuilder** script, maintaining the same entity name, and the new synopsys script will be added in the same folder used before.\
+After running it, the newly generated reports will be placed in the report folder and the postSynthesis netlist and ddc will be added next to the ones of the previous architecture.
