@@ -38,8 +38,8 @@ This will generate the following folder structure:
 - alu
   - report
   - schematic
-  - BEHAVIORAL_VERSION_B.script\
-\
+  - BEHAVIORAL_VERSION_B.script
+  \
 \
 That becomes the next one after the BEHAVIORAL_VERSION_B.script execution (with Synopsys):
 \
@@ -50,8 +50,8 @@ That becomes the next one after the BEHAVIORAL_VERSION_B.script execution (with 
   - schematic
   - BEHAVIORAL_VERSION_B.script
   - BEHAVIORAL_VERSION_B.ddc
-  - postSyn_BEHAVIORAL_VERSION_B.vhdl\
-\
+  - postSyn_BEHAVIORAL_VERSION_B.vhdl
+  \
 \
 If you have multiple architectures to synthesize, for the same entity, you just need to rerun the **synthBuilder** script, maintaining the same entity name, and the new synopsys script will be added in the same folder used before.\
 After running it, the newly generated reports will be placed in the report folder and the postSynthesis netlist and ddc will be added next to the ones of the previous architecture.
