@@ -33,8 +33,8 @@ Parameters have to follow this pattern: `"NAME = VALUE"`, enclosed in double quo
 Example:\
 `bash synthBuilder.bash -entity alu -architecture BEHAVIORAL_VERSION_B -vhd alu.vhd - param "N = 4"`
 \
-This will generate the following folder structure:
-\
+This will generate the following folder structure:\
+
 <ul><li>alu
   <ul>
     <li>report</li>
@@ -42,9 +42,9 @@ This will generate the following folder structure:
     <li>BEHAVIORAL_VERSION_B.script</li>
   </ul>
 </li></ul>\
-\
+
 That becomes the next one after the BEHAVIORAL_VERSION_B.script execution (with Synopsys):
-\
+
 <ul><li>alu
   <ul>
     <li>report
@@ -59,6 +59,6 @@ That becomes the next one after the BEHAVIORAL_VERSION_B.script execution (with 
     <li>postSyn_BEHAVIORAL_VERSION_B.vhdl</li>
   </ul>
 </li></ul>\
-\
+
 If you have multiple architectures to synthesize, for the same entity, you just need to rerun the **synthBuilder** script, maintaining the same entity name, and the new synopsys script will be added in the same folder used before.\
 After running it, the newly generated reports will be placed in the report folder and the postSynthesis netlist and ddc will be added next to the ones of the previous architecture.
