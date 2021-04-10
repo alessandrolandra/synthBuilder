@@ -28,7 +28,8 @@ The Synopsis script, that can be found in the directory named as the entity, ana
 You need to specify the `<entity>` and the `<architecture>` you want to synthesize (**same names as in the vhd file**), the VHD filename(s) and the PARAMeter(s) to be set constant during synthesis, in case they are needed.\
 \
 If you need to specify more than one VHD file, you need to separe them with a **whitespace**.\
-Parameters have to follow this pattern: `"NAME = VALUE"`, enclosed in double quotes, and separed by whitespace if more than one is needed\(`"N = 4 M = 4"`).\
+Parameters have to follow this pattern: `"NAME = VALUE"`, enclosed in double quotes, and separed by whitespace if more than one is needed\
+(`"N = 4 M = 4"`).\
 \
 Example:\
 `bash synthBuilder.bash -entity alu -architecture BEHAVIORAL_VERSION_B -vhd alu.vhd - param "N = 4"`
